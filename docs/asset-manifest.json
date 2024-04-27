@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/uber-eats-like-frontend/static/css/main.f855e6bc.css",
+    "main.js": "/uber-eats-like-frontend/static/js/main.0cdb7d5e.js",
+    "static/js/453.d855a71b.chunk.js": "/uber-eats-like-frontend/static/js/453.d855a71b.chunk.js",
+    "static/media/restaurant-image.jpg": "/uber-eats-like-frontend/static/media/restaurant-image.d944356a62a7031d76d4.jpg",
+    "static/media/food-image.jpg": "/uber-eats-like-frontend/static/media/food-image.7a276d7bb6e4d576b72f.jpg",
+    "static/media/main-cover-image.png": "/uber-eats-like-frontend/static/media/main-cover-image.05e2370ca696e657c33f.png",
+    "static/media/order-header.png": "/uber-eats-like-frontend/static/media/order-header.2bb2ab1f4389864803a9.png",
+    "static/media/logo.png": "/uber-eats-like-frontend/static/media/logo.152cdf6583ada286e8b0.png",
+    "index.html": "/uber-eats-like-frontend/index.html",
+    "main.f855e6bc.css.map": "/uber-eats-like-frontend/static/css/main.f855e6bc.css.map",
+    "main.0cdb7d5e.js.map": "/uber-eats-like-frontend/static/js/main.0cdb7d5e.js.map",
+    "453.d855a71b.chunk.js.map": "/uber-eats-like-frontend/static/js/453.d855a71b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.0cdb7d5e.js"
+  ]
+}

@@ -1,8 +1,8 @@
-const DEFAULT_API_LOCALHOST = 'http://localhost:3000/api/v1'
+const DEFAULT_API_HOST = 'https://uber-eats-like.onrender.com/'
 
-export const restaurantsIndex = `${DEFAULT_API_LOCALHOST}/restaurants`
+export const restaurantsIndex = `${DEFAULT_API_HOST}/restaurants`
 export const foodsIndex = (restaurantId) =>
-  `${DEFAULT_API_LOCALHOST}/restaurants/${restaurantId}/foods`
-export const orderFoods = `${DEFAULT_API_LOCALHOST}/order_foods`;
-export const orderFoodsReplace = `${DEFAULT_API_LOCALHOST}/order_foods/replace`;
-export const orders = `${DEFAULT_API_LOCALHOST}/orders`;
+  `${DEFAULT_API_HOST}/restaurants/${restaurantId}/foods`
+export const orderFoods = `${DEFAULT_API_HOST}/order_foods`;
+export const orderFoodsReplace = `${DEFAULT_API_HOST}/order_foods/replace`;
+export const orders = `${DEFAULT_API_HOST}/orders`;

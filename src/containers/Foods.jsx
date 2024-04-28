@@ -101,7 +101,7 @@ export const Foods = () => {
           }
         });
       })
-  }, [])
+  }, [restaurantId])
 
   return (
     <Fragment>

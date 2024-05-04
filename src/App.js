@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 
 // components
+import { Top } from './containers/Top.jsx';
 import { Restaurants } from './containers/Restaurants.jsx';
 import { Foods } from './containers/Foods.jsx';
 import { Orders } from './containers/Orders.jsx';
@@ -15,6 +16,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<Top />} />
         <Route path="/restaurants" element={<Restaurants />} />
         <Route path="/foods" element={<Foods />} />
         <Route path="/orders" element={<Orders />} />

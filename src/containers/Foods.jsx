@@ -106,7 +106,7 @@ export const Foods = () => {
   return (
     <Fragment>
       <HeaderWrapper>
-        <Link to="/restaurants">
+        <Link to="/">
           <MainLogoImage src={MainLogo} alt="main logo" />
         </Link>
         <BagIconWrapper>

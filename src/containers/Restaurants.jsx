@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 // components
 import { Skeleton } from '@mui/material'
+import { LocalMallIcon } from '../components/Icons';
 
 // apis
 import { fetchRestaurants } from '../apis/restaurants';
@@ -17,10 +18,10 @@ import {
 
 // constants
 import { REQUEST_STATE } from '../constants';
+import { COLORS } from '../style_constants';
 
 // images
 import MainLogo from '../images/logo.png';
-import MainCoverImage from '../images/main-cover-image.png';
 import RestaurantImage from '../images/restaurant-image.jpg';
 
 // styles
@@ -32,19 +33,20 @@ const HeaderWrapper = styled.div`
 
 const MainLogoImage = styled.img`
   height: 90px;
-`
-
-const MainCoverImageWrapper = styled.div`
-  text-align: center;
 `;
 
-const MainCover = styled.img`
-  height: 600px;
+const BagIconWrapper = styled.div`
+  padding-top: 24px;
+`;
+
+const ColoredBagIcon = styled(LocalMallIcon)`
+  color: ${COLORS.MAIN};
 `;
 
 const RestaurantsContentsList = styled.div`
   display: flex;
   justify-content: space-around;
+  margin-top: 50px;
   margin-bottom: 150px;
 `;
 
@@ -68,6 +70,29 @@ const SubText = styled.p`
   font-size: 12px;
 `;
 
+const ContentTitleWrapper = styled.div`
+  text-align: center;
+  padding: 8px 32px;
+  margin-bottom: 32px;
+`
+
+const ContentTitle = styled.h2`
+  position: relative;
+  font-size: 26px;
+  text-align: center;
+  border-bottom: 5px solid #dddddd;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 5px;
+    background-color: #387ccc;
+  }
+`
+
 // export
 export const Restaurants = () => {
   const [state, dispatch] = useReducer(restaurantsReducer, initialState);
@@ -88,11 +113,18 @@ export const Restaurants = () => {
   return (
     <Fragment>
       <HeaderWrapper>
-        <MainLogoImage src={MainLogo} alt="main logo" />
+        <Link to="/">
+          <MainLogoImage src={MainLogo} alt="main logo" />
+        </Link>
+        <BagIconWrapper>
+          <Link to="/orders">
+            <ColoredBagIcon fontSize="large" />
+          </Link>
+        </BagIconWrapper>
       </HeaderWrapper>
-      <MainCoverImageWrapper>
-        <MainCover src={MainCoverImage} alt="main cover" />
-      </MainCoverImageWrapper>
+      <ContentTitleWrapper>
+        <ContentTitle>レストラン一覧</ContentTitle>
+      </ContentTitleWrapper>
       <RestaurantsContentsList>
         {
           state.fetchState === REQUEST_STATE.LOADING ?
